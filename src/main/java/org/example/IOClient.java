@@ -8,8 +8,9 @@ import java.net.Socket;
 public class IOClient {
     public static RPCResponse sendRequest(String host, int port, RPCRequest request) {
         try(Socket socket = new Socket(host, port)) {
-            ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
+            // Client and Server 不能同时是 先InputStream再OutputStream的顺序
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+            ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
             System.out.println(request);
             oos.writeObject(request);
             oos.flush();
