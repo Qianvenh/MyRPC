@@ -1,4 +1,4 @@
-package org.example;
+package org.example.BlogService;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,8 +11,8 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User implements Serializable {
+public class Blog implements Serializable {
     private Integer id;
-    private String userName;
-    private boolean sex;
+    private Integer userId;
+    private String title;
 }

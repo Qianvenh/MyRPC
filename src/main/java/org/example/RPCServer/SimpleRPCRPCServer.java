@@ -1,15 +1,15 @@
-package org.example;
+package org.example.RPCServer;
+
+import lombok.AllArgsConstructor;
+import org.example.ServiceProvider;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+@AllArgsConstructor
 public class SimpleRPCRPCServer implements RPCServer {
     private final ServiceProvider serviceProvider;
-
-    SimpleRPCRPCServer(ServiceProvider serviceProvider) {
-        this.serviceProvider = serviceProvider;
-    }
 
     @Override
     public void start(int port) {

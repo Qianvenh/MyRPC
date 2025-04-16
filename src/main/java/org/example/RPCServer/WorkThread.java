@@ -1,6 +1,9 @@
-package org.example;
+package org.example.RPCServer;
 
 import lombok.AllArgsConstructor;
+import org.example.RPCRequest;
+import org.example.RPCResponse;
+import org.example.ServiceProvider;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

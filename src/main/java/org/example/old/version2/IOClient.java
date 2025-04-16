@@ -1,4 +1,7 @@
-package org.example;
+package org.example.old.version2;
+
+import org.example.RPCRequest;
+import org.example.RPCResponse;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

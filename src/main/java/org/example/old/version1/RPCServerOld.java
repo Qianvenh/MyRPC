@@ -2,7 +2,7 @@ package org.example.old.version1;
 
 import org.example.RPCRequest;
 import org.example.RPCResponse;
-import org.example.UserServiceImpl;
+import org.example.UserService.UserServiceImpl;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

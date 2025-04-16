@@ -1,4 +1,6 @@
-package org.example;
+package org.example.RPCServer;
+
+import org.example.ServiceProvider;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -12,7 +14,7 @@ public class ThreadPoolRPCRPCServer implements RPCServer {
     private final ThreadPoolExecutor threadPool;
     private final ServiceProvider serviceProvider;
 
-    ThreadPoolRPCRPCServer(ServiceProvider serviceProvider) {
+    public ThreadPoolRPCRPCServer(ServiceProvider serviceProvider) {
         threadPool = new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(),
                 1000, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<>(100));
         this.serviceProvider = serviceProvider;

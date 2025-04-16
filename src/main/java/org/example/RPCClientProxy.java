@@ -7,9 +7,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 @AllArgsConstructor
-public class ClientProxy implements InvocationHandler {
-    private String host;
-    private int port;
+public class RPCClientProxy implements InvocationHandler {
+    private RPCClient IOClient;
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -18,11 +17,11 @@ public class ClientProxy implements InvocationHandler {
                 .methodName(method.getName())
                 .params(args)
                 .paramsTypes(method.getParameterTypes()).build();
-        RPCResponse response = IOClient.sendRequest(host, port, request);
+        RPCResponse response = IOClient.sendRequest(request);
         return response != null ? response.getData() : null;
     }
 
-    <T> T getProxy(Class<T> clazz) {
+    public <T> T getProxy(Class<T> clazz) {
         Object o = Proxy.newProxyInstance(clazz.getClassLoader(), new Class[]{clazz}, this);
         return (T)o;
     }

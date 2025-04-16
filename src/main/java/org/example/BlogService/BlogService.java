@@ -1,4 +1,4 @@
-package org.example;
+package org.example.BlogService;
 
 public interface BlogService {
     Blog getBlogById(Integer id);

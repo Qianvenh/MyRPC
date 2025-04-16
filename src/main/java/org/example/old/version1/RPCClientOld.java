@@ -1,6 +1,6 @@
 package org.example.old.version1;
 
-import org.example.User;
+import org.example.UserService.User;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

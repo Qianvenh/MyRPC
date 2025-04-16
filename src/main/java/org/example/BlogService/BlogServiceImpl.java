@@ -1,4 +1,4 @@
-package org.example;
+package org.example.BlogService;
 
 public class BlogServiceImpl implements BlogService {
     @Override
