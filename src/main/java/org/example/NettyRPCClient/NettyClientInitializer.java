@@ -1,12 +1,11 @@
-package org.example;
+package org.example.NettyRPCClient;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
-import io.netty.handler.codec.LengthFieldPrepender;
-import io.netty.handler.codec.serialization.ObjectDecoder;
-import io.netty.handler.codec.serialization.ObjectEncoder;
+import org.example.Serializer.JsonSerializer;
+import org.example.Serializer.MyDecoder;
+import org.example.Serializer.MyEncoder;
 
 public class NettyClientInitializer extends ChannelInitializer<SocketChannel> {
 

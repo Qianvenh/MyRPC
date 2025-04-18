@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Serializer;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

@@ -1,4 +1,5 @@
-package org.example;
+package org.example.Serializer;
+
 
 public interface Serializer {
     byte[] serialize(Object obj);

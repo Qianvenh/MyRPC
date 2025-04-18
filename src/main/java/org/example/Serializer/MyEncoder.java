@@ -1,9 +1,11 @@
-package org.example;
+package org.example.Serializer;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 import lombok.AllArgsConstructor;
+import org.example.RPCRequest;
+import org.example.RPCResponse;
 
 @AllArgsConstructor
 public class MyEncoder extends MessageToByteEncoder<Object> {

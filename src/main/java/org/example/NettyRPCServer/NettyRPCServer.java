@@ -1,4 +1,4 @@
-package org.example;
+package org.example.NettyRPCServer;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -6,6 +6,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import lombok.AllArgsConstructor;
 import org.example.RPCServer.RPCServer;
+import org.example.ServiceProvider;
 
 @AllArgsConstructor
 public class NettyRPCServer implements RPCServer {

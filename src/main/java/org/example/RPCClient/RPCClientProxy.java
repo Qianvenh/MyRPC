@@ -1,6 +1,8 @@
-package org.example;
+package org.example.RPCClient;
 
 import lombok.AllArgsConstructor;
+import org.example.RPCRequest;
+import org.example.RPCResponse;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

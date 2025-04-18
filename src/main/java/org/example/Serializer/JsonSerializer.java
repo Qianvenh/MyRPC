@@ -1,8 +1,9 @@
-package org.example;
+package org.example.Serializer;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.JSONReader;
+import org.example.RPCRequest;
+import org.example.RPCResponse;
 
 public class JsonSerializer implements Serializer {
     @Override

@@ -1,8 +1,9 @@
-package org.example;
+package org.example.NettyRPCClient;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.AttributeKey;
+import org.example.RPCResponse;
 
 public class NettyClientHandler extends SimpleChannelInboundHandler<RPCResponse> {
     @Override
